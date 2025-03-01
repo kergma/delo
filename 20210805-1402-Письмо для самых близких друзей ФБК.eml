@@ -1,0 +1,659 @@
+Delivered-To: pushkinsv@gmail.com
+Received: by 2002:adf:b318:0:0:0:0:0 with SMTP id j24csp192040wrd;
+        Thu, 5 Aug 2021 00:02:40 -0700 (PDT)
+X-Google-Smtp-Source: ABdhPJxXCQq7pvc33CLgWTf2rj2OsVezXARre+M+lshMjXK2vyVB8EQyHkC9kpyDZHABBihigaWo
+X-Received: by 2002:a05:620a:129a:: with SMTP id w26mr610902qki.330.1628146960324;
+        Thu, 05 Aug 2021 00:02:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1628146960; cv=none;
+        d=google.com; s=arc-20160816;
+        b=VZBppiNtO6d5XV6vrEF5ndrotpY4lD1Sz/WzIydV1Mx34jJrxCEduqDs7Dp0NNqmKT
+         +pLQu6974YpuWFKoQmedpakvd8RRwn3wb+u6fvTCAWcvv/l9n0HHQPkWPMSgRCcpt+1j
+         h1fIE1Jl43KUxoqAsGzUHtGEIBCl4ZlId3Cyg18Llwwxj5/EqEuel4UxmRvicP7UKDHO
+         ONy1jF63OZWF3LhHELbTz+2UMDYWGGnPt1AjfVxZHI3U7j3rw8QyXYREamjcGNFi56L8
+         aPMuN4k3P1hd3k9OQW91B/vv421YMPxDoMtoOqreQ6s6MqYdX1fqJVvQ+PwjrcIHzz8N
+         sFhA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :content-transfer-encoding:mime-version:date:subject:reply-to:from
+         :to:dkim-signature:dkim-signature;
+        bh=hU5a8a/RJwyY9SzSEPrO4iT6HthVrSt67T0/81PsN0k=;
+        b=wB0qK6WNA4lGzld1DjUF4nbdJl62uqWCjNe8MYMcQSKNAisf1ienuIYa0IJ1cdiGeU
+         6PtFrjvfI/siO2e6L34zmPBLSzDPg1I0oONbGzBwZoeboS6OXK72T/xxxoK3f5wU6KVL
+         fzeEr2hw3eHBPJfIQ7iv0IEjSJNjCklTJ0ET89vekrHtVr+Of8cZ4zMxIWh42IootreE
+         KxY61EcXTY76DbF4vqPXgTVxk3WTCz5MwXj8p236lKlCrMQerP2ZQSfBJQ4iDlvCuF5p
+         +P/PSD9j/bhBGuj9ctE1Cw7JJifXIKtXEnOiiw/DEcSMaWSHqYGuNPTyXJzJeL+K79JT
+         LxnQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@fbk.info header.s=dk header.b=3Yl0DUCq;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=GqZnDsv7;
+       spf=pass (google.com: domain of bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com designates 192.92.97.7 as permitted sender) smtp.mailfrom="bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com"
+Return-Path: <bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com>
+Received: from s1.csa1.acemsa1.com ([192.92.97.7])
+        by mx.google.com with ESMTPS id a17si3053989qtw.381.2021.08.05.00.02.40
+        for <pushkinsv@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 05 Aug 2021 00:02:40 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com designates 192.92.97.7 as permitted sender) client-ip=192.92.97.7;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@fbk.info header.s=dk header.b=3Yl0DUCq;
+       dkim=pass header.i=@acems1.com header.s=dk header.b=GqZnDsv7;
+       spf=pass (google.com: domain of bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com designates 192.92.97.7 as permitted sender) smtp.mailfrom="bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=fbk.info;
+ h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ i=donate@fbk.info;
+ bh=hU5a8a/RJwyY9SzSEPrO4iT6HthVrSt67T0/81PsN0k=;
+ b=3Yl0DUCqeP0bXOoajwz4vH2DZmCD9MKUzX5m9cdcNS/vCFfZEtu3lpkzZ+h6whJgpDOVY1xBetYM
+   NZy79mshAnoWP1LI0MJi3yXVX8ToPgS2LdvXS8o6m/LlvdpadzE5Kx6C/SvTFt7LS09wZzOi2JlA
+   c1rnFpbgOpgzeE7ahdQ=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+ h=To:From:Reply-To:Subject:Date:MIME-Version:Content-Type:
+ Content-Transfer-Encoding:List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ bh=hU5a8a/RJwyY9SzSEPrO4iT6HthVrSt67T0/81PsN0k=;
+ b=GqZnDsv74ga6XfdB93wZ1Vi526FIfZIPXTlCGKRbkGiRdipKa2qmGfyxtUfmTVzGmdYmkQ3McTWE
+   wDMm58qqRwroKKMNMo2UYjOhVkmqGhBzE7M4kRgVMwItQOnBCYLHjdWM3fr8Ygg0DOjh4Yd68TId
+   kUXOe9tF5g6dLEBtUTk=
+Received: by s1.csa1.acemsa1.com id h1e6h02q274g for <pushkinsv@gmail.com>; Thu, 5 Aug 2021 07:02:14 +0000 (envelope-from <bounce-69233-3004-15648-pushkinsv=gmail.com@s1.csa1.acemsa1.com>)
+To: pushkinsv@gmail.com
+From: =?utf-8?Q?=D0=A4=D0=BE=D0=BD=D0=B4?=
+ =?utf-8?Q?_=D0=B1=D0=BE=D1=80=D1=8C=D0=B1=D1=8B_=D1=81?=
+ =?utf-8?Q?_=D0=BA=D0=BE=D1=80=D1=80=D1=83=D0=BF=D1=86=D0=B8=D0=B5=D0=B9?=
+ <donate@fbk.info>
+Reply-To: fbk@fbk.info
+Subject: =?utf-8?Q?=D0=9F=D0=B8=D1=81=D1=8C=D0=BC=D0=BE?=
+ =?utf-8?Q?_=D0=B4=D0=BB=D1=8F_=D1=81=D0=B0=D0=BC=D1=8B=D1=85?=
+ =?utf-8?Q?_=D0=B1=D0=BB=D0=B8=D0=B7=D0=BA=D0=B8=D1=85?=
+ =?utf-8?Q?_=D0=B4=D1=80=D1=83=D0=B7=D0=B5=D0=B9_=D0=A4=D0=91=D0=9A?=
+Date: Thu, 05 Aug 2021 02:01:55 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift-1333437824610b8ce40b5867.75830560_=_"
+Content-Transfer-Encoding: 7bit
+X-mid: cHVzaGtpbnN2QGdtYWlsLmNvbSAsIGMzMDA0ICwgbTM4MzIgLCBzNzE3MDA
+Feedback-ID: 69233:activecampaign
+X-250ok-CID: 69233-3004
+List-Unsubscribe: <mailto:unsubscribe-9210eedafcf2c6034830d61ed6344caf-3004-25c0153a3e24461be9727902029cae0f@s1.csa1.acemsa1.com>,
+ <https://fbk.emlnk1.com/box.php?nl=27&c=3004&m=3832&s=25c0153a3e24461be9727902029cae0f&funcml=unsub2&luha=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20210805070214.20720.1042102986.swift@fbk.activehosted.com>
+
+
+--_=_swift-1333437824610b8ce40b5867.75830560_=_
+Content-Type: text/plain; charset=utf-8
+
+______________________________________________________________________
+
+Прежде всего хотим сказать вам
+огромное спасибо за то, что
+вы до самого конца поддерживали Фонд
+борьбы с коррупцией регулярными
+пожертвованиями. Мы в буквальном
+смысле работали на ваши деньги. 
+
+Теперь ФБК больше нет, как и мечтал
+Путин. Но не думаем, что он успел
+порадоваться. Нас не остановило клеймо
+иностранного агента, не остановит
+и клеймо «экстремистов». Да,
+юридически ФБК ликвидирован, но наша
+команда, большая и продуктивная
+команда Навального - осталась. 
+
+В чем-то нам будет даже проще. Раньше
+мы были вынуждены выполнять кучу
+формальных правил российского Минюста.
+А теперь мы даже деньги можем свободно
+собирать не только в России. 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477580 
+
+Вы поддерживали нас раньше -
+поддержите снова. Это совершенно
+безопасно. Мы предприняли много
+усилий, чтобы защитить ваши платежи
+от глаз и лап путинских силовиков. 
+
+Как и всегда, команда Навального будет
+работать только на пожертвования
+сторонников. Смелых и честных граждан,
+которые мечтают сделать Россию
+свободной и счастливой. Таких, как вы. 
+
+Подпишитесь на пожертвования на нашем
+новом сайте: https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477546
+.
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477544
+
+С благодарностью, 
+команда Навального 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477535 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477547 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477548 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477549 
+
+https://fbk.emlnk1.com/lt.php?s=25c0153a3e24461be9727902029cae0f&i=3004A3832A27A477550 
+
+Если письмо не отображается,
+нажмите сюда  
+Вы получили это письмо, потому что
+адрес pushkinsv@gmail.com  был подписан на
+нашу рассылку. 
+Если вы больше не желаете получать эти
+письма, вы можете отписаться от
+рассылки  
+Команда Навального, Москва, Russian Federation
+--_=_swift-1333437824610b8ce40b5867.75830560_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>=0A
+<head>
+<meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">
+<meta name=3D"x-apple-disable-message-reformatting">
+<style>
+@import url('https://fonts.googleapis.com/css?family=3DPT+Sans:400,700&disp=
+lay=3Dswap&subset=3Dcyrillic,cyrillic-ext');
+</style>
+</head>
+<body style=3D"background-color: #f2f5fe;">
+ <!--[if (gte mso 9)|(IE)]>
+ <table width=3D"600" align=3D"center"><tr><td>
+ <![endif]-->
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" st=
+yle=3D"margin:0 auto; padding:0; min-width: 100%!important; background-colo=
+r: #f2f5fe;">
+<tr>
+ <td>
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center" st=
+yle=3D"margin:0 auto; padding:0; max-width: 600px; width: 100%;">
+ <tr>
+  <!--[if !(IE 7)]><!-->=20
+  <td style=3D"padding-top: 5%;">
+  <!-- <![endif]-->
+  <!--[if (gte mso 9)|(IE)]>
+  <td style=3D"padding-top: 30px;">
+  <![endif]-->       =20
+   <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"center"=
+ style=3D"margin:0 auto; width: 100%; max-width: 600px; background-color: #=
+ffffff; box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);">
+    <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top:11%; padding-bottom:11%; padding-left:11%; p=
+adding-right:11%;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding: 40px;">
+      <![endif]-->
+      <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"cent=
+er" style=3D"margin:0 auto; padding:0; max-width: 600px; width: 100%; backg=
+round-color:#ffffff;">
+<!-- =D0=9B=D0=BE=D0=B3=D0=BE=D1=82=D0=B8=D0=BF -->
+       <tr>
+        <td>
+          <img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/=
+framefbk.png" width=3D"94" height=3D"37" alt=3D"LOGO" style=3D"display: blo=
+ck; border:0; max-width:94px; max-height:37px;">
+        </td>=0A
+       </tr>=0A
+<!-- =D0=9B=D0=BE=D0=B3=D0=BE=D1=82=D0=B8=D0=BF -->
+<!-- =D0=9E=D1=81=D0=BD=D0=BE=D0=B2=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=
+=D1=82=D0=B5=D0=BD=D1=82 -->
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Activist', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 44px; line-height: 48px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Activist', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 44px; line-height: 48px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Activist', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 44px; line-height: 48px;">
+          </span>
+        </td>=0A
+       </tr>=0A
+
+ <!-- =D0=9B=D0=B8=D0=BD=D0=B8=D1=8F -->
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 5.3%;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 12px;">
+      <![endif]-->  =20
+          <hr style=3D"width:100%; max-width:600px; height:4px; border:0; b=
+ackground-color:#000000; color:#000000">
+        </td>=0A
+       </tr>=0A
+<!-- =D0=9B=D0=B8=D0=BD=D0=B8=D1=8F -->
+     =20
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+             =D0=9F=D1=80=D0=B5=D0=B6=D0=B4=D0=B5 =D0=B2=D1=81=D0=B5=D0=
+=B3=D0=BE =D1=85=D0=BE=D1=82=D0=B8=D0=BC =D1=81=D0=BA=D0=B0=D0=B7=D0=B0=
+=D1=82=D1=8C =D0=B2=D0=B0=D0=BC =D0=BE=D0=B3=D1=80=D0=BE=D0=BC=D0=BD=D0=
+=BE=D0=B5 =D1=81=D0=BF=D0=B0=D1=81=D0=B8=D0=B1=D0=BE =D0=B7=D0=B0=C2=A0=
+=D1=82=D0=BE, =D1=87=D1=82=D0=BE =D0=B2=D1=8B=C2=A0=D0=B4=D0=BE=C2=A0=D1=
+=81=D0=B0=D0=BC=D0=BE=D0=B3=D0=BE =D0=BA=D0=BE=D0=BD=D1=86=D0=B0 =D0=BF=
+=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D0=B2=D0=B0=D0=BB=D0=B8 =D0=
+=A4=D0=BE=D0=BD=D0=B4 =D0=B1=D0=BE=D1=80=D1=8C=D0=B1=D1=8B =D1=81=C2=A0=
+=D0=BA=D0=BE=D1=80=D1=80=D1=83=D0=BF=D1=86=D0=B8=D0=B5=D0=B9 =D1=80=D0=
+=B5=D0=B3=D1=83=D0=BB=D1=8F=D1=80=D0=BD=D1=8B=D0=BC=D0=B8 =D0=BF=D0=BE=
+=D0=B6=D0=B5=D1=80=D1=82=D0=B2=D0=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F=D0=BC=
+=D0=B8. =D0=9C=D1=8B=C2=A0=D0=B2=C2=A0=D0=B1=D1=83=D0=BA=D0=B2=D0=B0=D0=
+=BB=D1=8C=D0=BD=D0=BE=D0=BC =D1=81=D0=BC=D1=8B=D1=81=D0=BB=D0=B5 =D1=80=
+=D0=B0=D0=B1=D0=BE=D1=82=D0=B0=D0=BB=D0=B8 =D0=BD=D0=B0=C2=A0=D0=B2=D0=
+=B0=D1=88=D0=B8 =D0=B4=D0=B5=D0=BD=D1=8C=D0=B3=D0=B8.=20
+          </span>
+        </td>=0A
+       </tr>=0A
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+             =D0=A2=D0=B5=D0=BF=D0=B5=D1=80=D1=8C =D0=A4=D0=91=D0=9A =D0=
+=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B5 =D0=BD=D0=B5=D1=82, =D0=BA=D0=B0=D0=BA =
+=D0=B8=C2=A0=D0=BC=D0=B5=D1=87=D1=82=D0=B0=D0=BB =D0=9F=D1=83=D1=82=D0=
+=B8=D0=BD. =D0=9D=D0=BE=C2=A0=D0=BD=D0=B5=C2=A0=D0=B4=D1=83=D0=BC=D0=B0=
+=D0=B5=D0=BC, =D1=87=D1=82=D0=BE =D0=BE=D0=BD=C2=A0=D1=83=D1=81=D0=BF=D0=
+=B5=D0=BB =D0=BF=D0=BE=D1=80=D0=B0=D0=B4=D0=BE=D0=B2=D0=B0=D1=82=D1=8C=
+=D1=81=D1=8F. =D0=9D=D0=B0=D1=81 =D0=BD=D0=B5=C2=A0=D0=BE=D1=81=D1=82=D0=
+=B0=D0=BD=D0=BE=D0=B2=D0=B8=D0=BB=D0=BE =D0=BA=D0=BB=D0=B5=D0=B9=D0=BC=
+=D0=BE =D0=B8=D0=BD=D0=BE=D1=81=D1=82=D1=80=D0=B0=D0=BD=D0=BD=D0=BE=D0=
+=B3=D0=BE =D0=B0=D0=B3=D0=B5=D0=BD=D1=82=D0=B0, =D0=BD=D0=B5=C2=A0=D0=BE=
+=D1=81=D1=82=D0=B0=D0=BD=D0=BE=D0=B2=D0=B8=D1=82 =D0=B8=C2=A0=D0=BA=D0=
+=BB=D0=B5=D0=B9=D0=BC=D0=BE =C2=AB=D1=8D=D0=BA=D1=81=D1=82=D1=80=D0=B5=
+=D0=BC=D0=B8=D1=81=D1=82=D0=BE=D0=B2=C2=BB. =D0=94=D0=B0, =D1=8E=D1=80=
+=D0=B8=D0=B4=D0=B8=D1=87=D0=B5=D1=81=D0=BA=D0=B8 =D0=A4=D0=91=D0=9A =D0=
+=BB=D0=B8=D0=BA=D0=B2=D0=B8=D0=B4=D0=B8=D1=80=D0=BE=D0=B2=D0=B0=D0=BD, =
+=D0=BD=D0=BE=C2=A0=D0=BD=D0=B0=D1=88=D0=B0 =D0=BA=D0=BE=D0=BC=D0=B0=D0=
+=BD=D0=B4=D0=B0, =D0=B1=D0=BE=D0=BB=D1=8C=D1=88=D0=B0=D1=8F =D0=B8=C2=A0=
+=D0=BF=D1=80=D0=BE=D0=B4=D1=83=D0=BA=D1=82=D0=B8=D0=B2=D0=BD=D0=B0=D1=8F =
+=D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=B0 =D0=9D=D0=B0=D0=B2=D0=B0=D0=
+=BB=D1=8C=D0=BD=D0=BE=D0=B3=D0=BE=C2=A0=E2=80=94 =D0=BE=D1=81=D1=82=D0=
+=B0=D0=BB=D0=B0=D1=81=D1=8C.=20
+          </span>
+        </td>=0A
+       </tr>=0A
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+             =D0=92=C2=A0=D1=87=D0=B5=D0=BC-=D1=82=D0=BE =D0=BD=D0=B0=D0=
+=BC =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D0=B4=D0=B0=D0=B6=D0=B5 =D0=BF=D1=80=
+=D0=BE=D1=89=D0=B5. =D0=A0=D0=B0=D0=BD=D1=8C=D1=88=D0=B5 =D0=BC=D1=8B=C2=
+=A0=D0=B1=D1=8B=D0=BB=D0=B8 =D0=B2=D1=8B=D0=BD=D1=83=D0=B6=D0=B4=D0=B5=
+=D0=BD=D1=8B =D0=B2=D1=8B=D0=BF=D0=BE=D0=BB=D0=BD=D1=8F=D1=82=D1=8C =D0=
+=BA=D1=83=D1=87=D1=83 =D1=84=D0=BE=D1=80=D0=BC=D0=B0=D0=BB=D1=8C=D0=BD=
+=D1=8B=D1=85 =D0=BF=D1=80=D0=B0=D0=B2=D0=B8=D0=BB =D1=80=D0=BE=D1=81=D1=
+=81=D0=B8=D0=B9=D1=81=D0=BA=D0=BE=D0=B3=D0=BE =D0=9C=D0=B8=D0=BD=D1=8E=
+=D1=81=D1=82=D0=B0. =D0=90=C2=A0=D1=82=D0=B5=D0=BF=D0=B5=D1=80=D1=8C =D0=
+=BC=D1=8B=C2=A0=D0=B4=D0=B0=D0=B6=D0=B5 =D0=B4=D0=B5=D0=BD=D1=8C=D0=B3=
+=D0=B8 =D0=BC=D0=BE=D0=B6=D0=B5=D0=BC =D1=81=D0=B2=D0=BE=D0=B1=D0=BE=D0=
+=B4=D0=BD=D0=BE =D1=81=D0=BE=D0=B1=D0=B8=D1=80=D0=B0=D1=82=D1=8C =D0=BD=
+=D0=B5=C2=A0=D1=82=D0=BE=D0=BB=D1=8C=D0=BA=D0=BE =D0=B2=C2=A0=D0=A0=D0=
+=BE=D1=81=D1=81=D0=B8=D0=B8.=20
+          </span>
+        </td>=0A
+       </tr>=0A
+
+<!-- =D0=91=D0=BB=D0=BE=D0=BA img -->
+<tr>
+<!--[if !(IE 7)]><!-->=20
+<td style=3D"padding-top: 5%;">
+<a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24461be9727902029cae=
+0f&i=3D3004A3832A27A477580" style=3D"color: #0d7fa3; text-decoration: none;=
+" target=3D"_blank">
+<img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/coveracf2.=
+jpg" alt=3D"=D0=9C=D1=8B =D0=BF=D1=80=D0=BE=D0=B4=D0=BE=D0=BB=D0=B6=D0=
+=B0=D0=B5=D0=BC" style=3D"width:100%; max-width:600px; border:0;"></a>
+</td>=0A
+</tr>=0A
+<!-- <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+<td style=3D"padding-top: 30px;">
+<a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24461be9727902029cae=
+0f&i=3D3004A3832A27A477580" style=3D"color: #0d7fa3; text-decoration: none;=
+" target=3D"_blank">
+<img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/coveracf2.=
+jpg" alt=3D"=D0=9C=D1=8B =D0=BF=D1=80=D0=BE=D0=B4=D0=BE=D0=BB=D0=B6=D0=
+=B0=D0=B5=D0=BC" width=3D"520" style=3D"width:520px; border:0;"></a>
+</td>=0A
+</tr>=0A
+<![endif]-->
+<!-- =D0=91=D0=BB=D0=BE=D0=BA img -->
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+=D0=92=D1=8B=C2=A0=D0=BF=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D0=B2=
+=D0=B0=D0=BB=D0=B8 =D0=BD=D0=B0=D1=81 =D1=80=D0=B0=D0=BD=D1=8C=D1=88=D0=
+=B5=C2=A0=E2=80=94 =D0=BF=D0=BE=D0=B4=D0=B4=D0=B5=D1=80=D0=B6=D0=B8=D1=
+=82=D0=B5 =D1=81=D0=BD=D0=BE=D0=B2=D0=B0. =D0=AD=D1=82=D0=BE =D1=81=D0=
+=BE=D0=B2=D0=B5=D1=80=D1=88=D0=B5=D0=BD=D0=BD=D0=BE =D0=B1=D0=B5=D0=B7=
+=D0=BE=D0=BF=D0=B0=D1=81=D0=BD=D0=BE. =D0=9C=D1=8B=C2=A0=D0=BF=D1=80=D0=
+=B5=D0=B4=D0=BF=D1=80=D0=B8=D0=BD=D1=8F=D0=BB=D0=B8 =D0=BC=D0=BD=D0=BE=
+=D0=B3=D0=BE =D1=83=D1=81=D0=B8=D0=BB=D0=B8=D0=B9, =D1=87=D1=82=D0=BE=D0=
+=B1=D1=8B =D0=B7=D0=B0=D1=89=D0=B8=D1=82=D0=B8=D1=82=D1=8C =D0=B2=D0=B0=
+=D1=88=D0=B8 =D0=BF=D0=BB=D0=B0=D1=82=D0=B5=D0=B6=D0=B8 =D0=BE=D1=82=C2=
+=A0=D0=B3=D0=BB=D0=B0=D0=B7 =D0=B8=C2=A0=D0=BB=D0=B0=D0=BF =D0=BF=D1=83=
+=D1=82=D0=B8=D0=BD=D1=81=D0=BA=D0=B8=D1=85 =D1=81=D0=B8=D0=BB=D0=BE=D0=
+=B2=D0=B8=D0=BA=D0=BE=D0=B2.
+          </span>
+        </td>=0A
+       </tr>=0A
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+=D0=9A=D0=B0=D0=BA =D0=B8=C2=A0=D0=B2=D1=81=D0=B5=D0=B3=D0=B4=D0=B0, =D0=
+=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=B0 =D0=9D=D0=B0=D0=B2=D0=B0=D0=BB=
+=D1=8C=D0=BD=D0=BE=D0=B3=D0=BE =D0=B1=D1=83=D0=B4=D0=B5=D1=82 =D1=80=D0=
+=B0=D0=B1=D0=BE=D1=82=D0=B0=D1=82=D1=8C =D1=82=D0=BE=D0=BB=D1=8C=D0=BA=
+=D0=BE =D0=BD=D0=B0=C2=A0=D0=BF=D0=BE=D0=B6=D0=B5=D1=80=D1=82=D0=B2=D0=
+=BE=D0=B2=D0=B0=D0=BD=D0=B8=D1=8F =D1=81=D1=82=D0=BE=D1=80=D0=BE=D0=BD=
+=D0=BD=D0=B8=D0=BA=D0=BE=D0=B2. =D0=A1=D0=BC=D0=B5=D0=BB=D1=8B=D1=85 =D0=
+=B8=C2=A0=D1=87=D0=B5=D1=81=D1=82=D0=BD=D1=8B=D1=85 =D0=B3=D1=80=D0=B0=
+=D0=B6=D0=B4=D0=B0=D0=BD, =D0=BA=D0=BE=D1=82=D0=BE=D1=80=D1=8B=D0=B5 =D0=
+=BC=D0=B5=D1=87=D1=82=D0=B0=D1=8E=D1=82 =D1=81=D0=B4=D0=B5=D0=BB=D0=B0=
+=D1=82=D1=8C =D0=A0=D0=BE=D1=81=D1=81=D0=B8=D1=8E =D1=81=D0=B2=D0=BE=D0=
+=B1=D0=BE=D0=B4=D0=BD=D0=BE=D0=B9 =D0=B8=C2=A0=D1=81=D1=87=D0=B0=D1=81=
+=D1=82=D0=BB=D0=B8=D0=B2=D0=BE=D0=B9. =D0=A2=D0=B0=D0=BA=D0=B8=D1=85, =
+=D0=BA=D0=B0=D0=BA=C2=A0=D0=B2=D1=8B.
+          </span>
+        </td>=0A
+       </tr>=0A
+
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+=D0=9F=D0=BE=D0=B4=D0=BF=D0=B8=D1=88=D0=B8=D1=82=D0=B5=D1=81=D1=8C =D0=
+=BD=D0=B0=C2=A0=D0=BF=D0=BE=D0=B6=D0=B5=D1=80=D1=82=D0=B2=D0=BE=D0=B2=D0=
+=B0=D0=BD=D0=B8=D1=8F =D0=BD=D0=B0=C2=A0=D0=BD=D0=B0=D1=88=D0=B5=D0=BC =
+=D0=BD=D0=BE=D0=B2=D0=BE=D0=BC =D1=81=D0=B0=D0=B9=D1=82=D0=B5: <a href=3D"h=
+ttps://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24461be9727902029cae0f&i=3D3004A=
+3832A27A477543" style=3D"text-decoration: underline; color: #ff3301" target=
+=3D"_blank"><span style=3D"color: #ff3301">https://world.fbk.info</span></a=
+>.
+          </span>
+        </td>=0A
+       </tr>=0A
+
+
+ <!-- =D0=9A=D0=BD=D0=BE=D0=BF=D0=BA=D0=B0 -->
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top:6.6%;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px;">
+      <![endif]-->
+          <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24461be972=
+7902029cae0f&i=3D3004A3832A27A477544" style=3D"border:0px; text-decoration:=
+ none" target=3D"_blank">
+          <img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/=
+supportacf.png" alt=3D"button" display=3D"block" width=3D"184" height=3D"60=
+" style=3D"max-width:184px; max-height:60px; border:0; border-style:none; o=
+utline: none;"></a>
+        </td>=0A
+       </tr>=0A
+<!-- =D0=9A=D0=BD=D0=BE=D0=BF=D0=BA=D0=B0 -->
+
+=20
+       <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D"padding-top: 6.6%; font-family: 'Formular', Roboto, PT S=
+ans, Helvetica, Arial, sans-serif; font-size: 20px; line-height: 26px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D"padding-top: 30px; font-family: 'Formular', Roboto, 'PT =
+Sans', Arial, Helvetica, sans-serif; font-size: 20px; line-height: 26px;">
+      <![endif]-->
+          <span style=3D"font-family: 'Formular', Roboto, PT Sans, Helvetic=
+a, Arial, sans-serif; color: #000000; font-size: 20px; line-height: 26px;">
+=D0=A1 =D0=B1=D0=BB=D0=B0=D0=B3=D0=BE=D0=B4=D0=B0=D1=80=D0=BD=D0=BE=D1=
+=81=D1=82=D1=8C=D1=8E, <br>
+<span style=3D"color: #ff3301">=D0=BA=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=
+=B0 =D0=9D=D0=B0=D0=B2=D0=B0=D0=BB=D1=8C=D0=BD=D0=BE=D0=B3=D0=BE</span>
+          </span>
+        </td>=0A
+       </tr>=0A
+
+<!-- =D0=91=D0=BB=D0=BE=D0=BA img -->
+<tr>
+<!--[if !(IE 7)]><!-->=20
+<td style=3D"padding-top: 12%;">
+<img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/199days.pn=
+g" alt=3D"=D0=9D=D0=B0=D0=B2=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B2 =
+=D1=82=D1=8E=D1=80=D1=8C=D0=BC=D0=B5" style=3D"width:100%; max-width:600px;=
+ border:0;">
+</td>=0A
+</tr>=0A
+<!-- <![endif]-->
+<!--[if (gte mso 9)|(IE)]>
+<td style=3D"padding-top: 30px;">
+<img src=3D"https://fbk.img-us6.com/ya.matveev%40navalny2018.org/199days.pn=
+g" alt=3D"=D0=9D=D0=B0=D0=B2=D0=B0=D0=BB=D1=8C=D0=BD=D1=8B=D0=B9 =D0=B2 =
+=D1=82=D1=8E=D1=80=D1=8C=D0=BC=D0=B5" width=3D"520" style=3D"width:520px; b=
+order:0;">
+</td>=0A
+</tr>=0A
+<![endif]-->
+<!-- =D0=91=D0=BB=D0=BE=D0=BA img -->
+<!-- =D0=9E=D1=81=D0=BD=D0=BE=D0=B2=D0=BD=D0=BE=D0=B9 =D0=BA=D0=BE=D0=BD=
+=D1=82=D0=B5=D0=BD=D1=82 -->
+
+      <tr>
+      <!--[if !(IE 7)]><!-->=20
+      <td style=3D" font-family: Formular, PT Sans, Helvetica, Arial, sans-=
+serif; font-size: 12px; line-height: 15px;">
+      <!-- <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <td style=3D" font-family: Formular, PT Sans, Helvetica, Arial, sans-=
+serif; font-size: 12px; line-height: 15px;">
+      <![endif]-->
+        </td>=0A
+       </tr>=0A
+      </table>=0A
+     </td>=0A
+    </tr>=0A
+   </table>=0A
+  </td>=0A
+ </tr>=0A
+<!-- =D0=9F=D0=BE=D0=B4=D0=B2=D0=B0=D0=BB -->
+ <tr>
+        <!--[if !(IE 7)]><!-->=20
+        <td align=3D"center" style=3D"width:100%; max-width:600px; padding-=
+top: 6.6%; padding-right: 1%; padding-left: 1%;">
+        <!-- <![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        <td align=3D"center" style=3D"width:100%; max-width:600px; padding-=
+top: 36px; padding-left: 40px; padding-right: 6px;">
+        <![endif]-->
+<!-- =D0=91=D0=BB=D0=BE=D0=BA =D1=81=D0=BE=D1=86. =D1=81=D0=B5=D1=82=D0=
+=B5=D0=B9 -->
+    <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center=
+" width=3D"240" style=3D"width:264px; max-width:264px; margin:auto;
+    padding:0; padding:0;">
+              <tr style=3D"margin:0;padding:0;">
+                <td align=3D"center" style=3D"padding-left:0px; padding-rig=
+ht:8px;">
+                  <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24=
+461be9727902029cae0f&i=3D3004A3832A27A477535" style=3D"display:inline-block=
+; width:40px; height:40px;border:0px;text-decoration: none">
+                    <img src=3D"https://fbk.img-us6.com/ya.matveev%40navaln=
+y2018.org/group.png" alt=3D"YouTube" width=3D"40" style=3D"display:block; w=
+idth:40px; height:40px;border-style:none!important; outline: none;"/>
+                  </a>
+                </td>=0A
+
+                <td align=3D"center" style=3D"padding-left:8px; padding-rig=
+ht:8px;">
+                  <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24=
+461be9727902029cae0f&i=3D3004A3832A27A477547" style=3D"display:inline-block=
+; width:40px; height:40px;border:0px;text-decoration: none">
+                    <img src=3D"https://fbk.img-us6.com/ya.matveev%40navaln=
+y2018.org/group_30.7.png" alt=3D"INS" width=3D"40" style=3D"display:block; =
+width:40px; height:40px;border-style:none!important; outline: none;"/>
+                  </a>
+                </td>=0A
+
+                <td align=3D"center" style=3D"margin:0;padding-left:8px;pad=
+ding-right:8px;">
+                  <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24=
+461be9727902029cae0f&i=3D3004A3832A27A477548" style=3D"display:inline-block=
+; width:40px; height:40px;border:0px;text-decoration: none">
+                    <img src=3D"https://fbk.img-us6.com/ya.matveev%40navaln=
+y2018.org/group_30-2.png" alt=3D"FB" width=3D"40" style=3D"display:block; w=
+idth:40px; height:40px;border-style:none!important; outline: none;"/>
+                  </a>
+                </td>=0A
+
+                <td align=3D"center" style=3D"margin:0;padding-left:8px;pad=
+ding-right:8px;">
+                  <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24=
+461be9727902029cae0f&i=3D3004A3832A27A477549" style=3D"display:inline-block=
+; width:40px; height:40px;border:0px;text-decoration: none">
+                    <img src=3D"https://fbk.img-us6.com/ya.matveev%40navaln=
+y2018.org/group_46.1.png" alt=3D"TG" width=3D"40" style=3D"display:block; w=
+idth:40px; height:40px;border-style:none!important; outline: none;"/>
+                  </a>
+                </td>=0A
+                <td align=3D"center" style=3D"margin:0;padding-left:8px;pad=
+ding-right:0px;">
+                  <a href=3D"https://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24=
+461be9727902029cae0f&i=3D3004A3832A27A477550" style=3D"display:inline-block=
+; width:40px; height:40px;border:0px;text-decoration: none">
+                    <img src=3D"https://fbk.img-us6.com/ya.matveev%40navaln=
+y2018.org/group_30.png" alt=3D"TW" width=3D"40" style=3D"display:block; wid=
+th:40px; height:40px;border-style:none!important; outline: none;"/>
+                  </a>
+                </td>=0A
+              </tr>=0A
+      </table>=0A
+  </td>=0A
+ </tr>=0A
+<!-- =D0=91=D0=BB=D0=BE=D0=BA =D1=81=D0=BE=D1=86. =D1=81=D0=B5=D1=82=D0=
+=B5=D0=B9 -->
+ <tr>
+        <!--[if !(IE 7)]><!-->=20
+        <td align=3D"center" style=3D"width:100%; max-width:600px; padding-=
+top: 4%; padding-bottom: 4%; padding-left: 6.6%; padding-right: 6.6%; font-=
+size: 15px; line-height: 27px;">
+        <!-- <![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        <td align=3D"center" style=3D"width:100%; max-width:600px; padding-=
+top: 24px; padding-bottom: 24px; padding-left: 40px; padding-right: 40px; f=
+ont-size: 15px; line-height: 27px;">
+        <![endif]-->
+     <!--[if !(IE 7)]><!-->=20
+        <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"ce=
+nter" width=3D"600" style=3D"width:100%; max-width:600px; padding-right: 1%=
+;"><tr><td align=3D"center">
+        <!-- <![endif]-->
+        <!--[if (gte mso 9)|(IE)]>
+        <table cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"ce=
+nter" width=3D"600" style=3D"width:100%; max-width:600px; padding-right: 6p=
+x;"><tr><td align=3D"center">
+        <![endif]-->
+    <span style=3D"font-family: Formular, PT Sans, Helvetica, Arial, sans-s=
+erif; color: #989bae; font-size: 15px; line-height: 26px;">
+      =D0=95=D1=81=D0=BB=D0=B8 =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE =D0=
+=BD=D0=B5 =D0=BE=D1=82=D0=BE=D0=B1=D1=80=D0=B0=D0=B6=D0=B0=D0=B5=D1=82=
+=D1=81=D1=8F, =D0=BD=D0=B0=D0=B6=D0=BC=D0=B8=D1=82=D0=B5=C2=A0<a href=3D"ht=
+tps://fbk.emlnk1.com/lt.php?s=3D25c0153a3e24461be9727902029cae0f&i=3D3004A3=
+832A27A477540" style=3D"color: #3869a2; text-decoration:underline;">=D1=
+=81=D1=8E=D0=B4=D0=B0</a> <br>=20
+      =D0=92=D1=8B =D0=BF=D0=BE=D0=BB=D1=83=D1=87=D0=B8=D0=BB=D0=B8 =D1=
+=8D=D1=82=D0=BE =D0=BF=D0=B8=D1=81=D1=8C=D0=BC=D0=BE, =D0=BF=D0=BE=D1=82=
+=D0=BE=D0=BC=D1=83 =D1=87=D1=82=D0=BE =D0=B0=D0=B4=D1=80=D0=B5=D1=81 <a hre=
+f=3D"mailto:pushkinsv@gmail.com" style=3D"color: #3869a2;">pushkinsv@gmail.=
+com</a> =D0=B1=D1=8B=D0=BB =D0=BF=D0=BE=D0=B4=D0=BF=D0=B8=D1=81=D0=B0=D0=
+=BD =D0=BD=D0=B0 =D0=BD=D0=B0=D1=88=D1=83 =D1=80=D0=B0=D1=81=D1=81=D1=8B=
+=D0=BB=D0=BA=D1=83. <br>=20
+      =D0=95=D1=81=D0=BB=D0=B8 =D0=B2=D1=8B =D0=B1=D0=BE=D0=BB=D1=8C=D1=
+=88=D0=B5 =D0=BD=D0=B5 =D0=B6=D0=B5=D0=BB=D0=B0=D0=B5=D1=82=D0=B5 =D0=BF=
+=D0=BE=D0=BB=D1=83=D1=87=D0=B0=D1=82=D1=8C =D1=8D=D1=82=D0=B8 =D0=BF=D0=
+=B8=D1=81=D1=8C=D0=BC=D0=B0, =D0=B2=D1=8B =D0=BC=D0=BE=D0=B6=D0=B5=D1=82=
+=D0=B5 <a href=3D"https://fbk.emlnk1.com/proc.php?nl=3D27&c=3D3004&m=3D3832=
+&s=3D25c0153a3e24461be9727902029cae0f&act=3Dunsub" style=3D"color: #3869a2;=
+">=D0=BE=D1=82=D0=BF=D0=B8=D1=81=D0=B0=D1=82=D1=8C=D1=81=D1=8F=C2=A0=D0=
+=BE=D1=82 =D1=80=D0=B0=D1=81=D1=81=D1=8B=D0=BB=D0=BA=D0=B8</a> <br> =D0=
+=9A=D0=BE=D0=BC=D0=B0=D0=BD=D0=B4=D0=B0 =D0=9D=D0=B0=D0=B2=D0=B0=D0=BB=
+=D1=8C=D0=BD=D0=BE=D0=B3=D0=BE, =D0=9C=D0=BE=D1=81=D0=BA=D0=B2=D0=B0, Russi=
+an Federation
+    </span>
+     </td>=0A</tr>=0A</table>=0A
+  </td>=0A
+ </tr>=0A
+<!-- =D0=9F=D0=BE=D0=B4=D0=B2=D0=B0=D0=BB -->
+</table>=0A
+  </td>=0A
+ </tr>=0A
+</table>=0A
+<!--[if (gte mso 9)|(IE)]>
+ </td>=0A</tr>=0A</table>=0A
+<![endif]-->
+<img src=3D"https://fbk.emlnk1.com/lt.php?nl=3D27&c=3D3004&m=3D3832&s=3D25c=
+0153a3e24461be9727902029cae0f&l=3Dopen" border=3D"0" width=3D"1" height=3D"=
+1" style=3D"display:block;width:1px!important;min-width:1px!important;max-w=
+idth:1px!important;height:1px!important;border:0;overflow:hidden;" /><br cl=
+ear=3D"all" /></body>
+=0A</html>
+--_=_swift-1333437824610b8ce40b5867.75830560_=_--
+

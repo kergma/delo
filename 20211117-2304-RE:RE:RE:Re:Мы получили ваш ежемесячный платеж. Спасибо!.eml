@@ -1,0 +1,138 @@
+Delivered-To: pushkinsv@gmail.com
+Received: by 2002:adf:a1d5:0:0:0:0:0 with SMTP id v21csp810234wrv;
+        Wed, 17 Nov 2021 08:04:00 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJxkY7IFuwdjA1VF2G6fCHv1fjCdyhSasHakCLs7vo6w7TBW9zPy5T4y6nqhHXuSqc96MK6G
+X-Received: by 2002:a63:6985:: with SMTP id e127mr5946950pgc.404.1637165040697;
+        Wed, 17 Nov 2021 08:04:00 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1637165040; cv=none;
+        d=google.com; s=arc-20160816;
+        b=SRktcWp9es0azajn6sa8+is3o4fEiGhBN98YndqW/Nppn9ldZZZVN43zBA34AirLrA
+         n8b4Hix6xUD5TnFSD4OGCZgKvwJNLVSltQKPQg20AbxZFOuYK2Zxy9Tbbi2urv56y2ob
+         DQx3p35VG3BaLpiux+RcEYGZ0zhkOjFxwW1QwEbQAutcg4c1Mj8uXTy2yCRpi0CMl6lV
+         01bmsS/CRITAk3TTlLsNNyVwbAXhKfFvN6F95Fk/75kKwThhrURFFMxs/4Oo9miDyXt1
+         UF/cUYwyotda8u4gbBC0uazVcSirLVpGbWurtkFyq2zZp3ihY4ox5wOJXoA0nxFsf4SG
+         Xw5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:content-transfer-encoding:mime-version:subject:in-reply-to
+         :message-id:from:date:dkim-signature:dkim-signature;
+        bh=ZoD+UNR22DwpgUsG+fgrlq+1D4yzn3ao5aVsd9XQVZw=;
+        b=bS+fFX9nYNrkbhAbdynA7LFRjFpsIltm28pQQMoLwC9c8qLhfInmCgq84TKisszL1L
+         jNzUA3CEDvGKog81qLLqVfrfmlFUYuNeF8fnmtjelJadigHI/MqMeFLSOAPjyiALbdQR
+         TQMxhkcWHxK6yD9TseL8byNF3LNa2C4kfTQ2S49leS40/ucMIBkJ27OMSs1JK+Ps7tFn
+         3tuQUVOucQfAzD9UnH1ZYaBS2e7v7BsfcOO2DQvWHscZeGXAuCZrNI5YAY6SnD1rWFap
+         4xolChk1GDKPU8Lexz1JoP8unwqJE/MgogTK0y7mn/Q9tooWlCfLfZXM7far7IPfFDYo
+         2TPw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@out.supportbeemail.com header.s=smtpapi header.b=FbzMJrJ0;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=lDO4wJK9;
+       spf=pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.162.39 as permitted sender) smtp.mailfrom="bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=fbk.info
+Return-Path: <bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com>
+Received: from o2.em.out.supportbeemail.com (o2.em.out.supportbeemail.com. [149.72.162.39])
+        by mx.google.com with ESMTPS id q5si287795pfu.363.2021.11.17.08.03.59
+        for <pushkinsv@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Wed, 17 Nov 2021 08:04:00 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.162.39 as permitted sender) client-ip=149.72.162.39;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@out.supportbeemail.com header.s=smtpapi header.b=FbzMJrJ0;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=lDO4wJK9;
+       spf=pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.162.39 as permitted sender) smtp.mailfrom="bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=fbk.info
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=out.supportbeemail.com;
+	h=from:in-reply-to:subject:mime-version:content-type:
+	content-transfer-encoding:x-feedback-id:to;
+	s=smtpapi; bh=ZoD+UNR22DwpgUsG+fgrlq+1D4yzn3ao5aVsd9XQVZw=;
+	b=FbzMJrJ0BSNjeTL3EY2yP+HAEZZ8oNbGQUNtI22YlIPMJSKyUwqRY5oQii81VPbVC60j
+	vQsGX0seG+h1pm6bkOJet42VfB+b29Bo3iEWaSfuYC2OvcQJwVXNeyFUqvyU4aRFWm8FUE
+	EZSpIbZgVM361qJBMXV4tLdT7yVWwDmMI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=from:in-reply-to:subject:mime-version:content-type:
+	content-transfer-encoding:x-feedback-id:to;
+	s=smtpapi; bh=ZoD+UNR22DwpgUsG+fgrlq+1D4yzn3ao5aVsd9XQVZw=;
+	b=lDO4wJK973mt5pCo/TBnCest4f4oPxMF45iIhw8hwj4bAHdFbLdrKgdrmmPZxJN26FWn
+	WG6a2JxqiuM1JVCr4Hwe4RLZHnvPMTUoCsJLHqkyRC5NwbtittruRW8DdFq0X8vnfSs8HB
+	o45ABUXcSx8dSosEhGgJ0bz9+6a1JENrA=
+Received: by filterdrecv-56986879c-77phw with SMTP id filterdrecv-56986879c-77phw-1-619527EE-13A
+        2021-11-17 16:03:59.183923929 +0000 UTC m=+6630225.214002955
+Received: from postfix.supportbeemail.com (unknown)
+	by geopod-ismtpd-3-2 (SG) with ESMTP id I2feh7SsSDuXHPCMsilAlg
+	for <pushkinsv@gmail.com>; Wed, 17 Nov 2021 16:03:58.897 +0000 (UTC)
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+	by postfix.supportbeemail.com (Postfix) with ESMTP id CBF608010F
+	for <pushkinsv@gmail.com>; Wed, 17 Nov 2021 16:03:58 +0000 (UTC)
+Date: Wed, 17 Nov 2021 16:03:59 +0000 (UTC)
+From:
+	=?utf-8?q?=D0=A4=D0=BE=D0=BD=D0=B4_=D0=B1=D0=BE=D1=80=D1=8C=D0=B1=D1=8B_?=
+	=?utf-8?q?=D1=81_=D0=BA=D0=BE=D1=80=D1=80=D1=83=D0=BF=D1=86=D0=B8=D0=B5?=
+	=?utf-8?q?=D0=B9?= <donate@fbk.info>
+Message-ID: <619527eec8274_1c1450cd1547115504c@supportbeemail.com>
+In-Reply-To: <CACo50SCOPDa0CpxoBr2ivBT8t8rnoes5WyUggtmNmeiaXOAB-g@mail.gmail.com>
+Subject: RE: Re: =?UTF-8?B?0JzRiyDQv9C+0LvRg9GH0LjQu9C4INCy0LDRiA==?=
+ =?UTF-8?B?INC10LbQtdC80LXRgdGP0YfQvdGL0Lkg0L/Qu9Cw0YLQtdC2Lg==?=
+ =?UTF-8?B?INCh0L/QsNGB0LjQsdC+IQ==?=
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_619527eec8bc2_1c1450cd15471155389";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SupportBee-Agent-reply: true
+X-SupportBee-TicketId: 36247971
+X-Feedback-ID: 1836816:SG
+X-SG-EID: 
+ =?us-ascii?Q?pHt8awF22JOCerGoLIZJbGNhM6ASLjOVHOXYa2hJisgJ=2F8KrGxz4gQ=2FTGmqJaO?=
+ =?us-ascii?Q?5w6bVIw5wvmsmFdmne1bAlTjsaI2P2+cTXojTo6?=
+ =?us-ascii?Q?H1J2QHlhC31VdwEwMvs37Ls8w2KTvrv4ZvQDkzE?=
+ =?us-ascii?Q?HHrK0fBVrudVZzov55Yh4BKLeaIfBlo1+e7JInq?=
+ =?us-ascii?Q?tES2FKQgYl7Z3mcxrXQbhX0bsDviZc2QvESL7Tm?=
+ =?us-ascii?Q?U0IIofge=2F4raqPvTccwui62H91T4g+gZz=2FmoZYr?=
+ =?us-ascii?Q?Mzt3pMPd2XpAuR30ym5JY4IsB5rttFmnssxcH34?= =?us-ascii?Q?HVc=3D?=
+To: =?iso-8859-5?b?wdXg09XZIL/j6NrY3Q==?= <pushkinsv@gmail.com>
+X-Entity-ID: SGvpZXlrz4yUCFOEDKGVtw==
+
+
+----==_mimepart_619527eec8bc2_1c1450cd15471155389
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_619527eec87ad_1c1450cd1547115515a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_619527eec87ad_1c1450cd1547115515a
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+0JfQtNGA0LDQstGB0YLQstGD0LnRgtC1IcKgDQoNCsKgDQoNCtCc0Ysg0L7RgtC80LXQvdC40LvQ
+uCDQstCw0YjRgyDQv9C+0LTQv9C40YHQutGDLiDQn9C+0LLRgtC+0YDQvdGL0YUg0YHQv9C40YHQ
+sNC90LjQuSDQsdGL0YLRjCDQvdC1INC00L7Qu9C20L3Qvi4g0J3QviDQtdGB0LvQuCDRgdC70YPR
+h9C40YLRgdGPINGB0LHQvtC5INC4INC00LXQvdGM0LPQuCDRgdC90L7QstCwINGB0L/QuNGI0YPR
+gtGB0Y8sINC/0L7QttCw0LvRg9C50YHRgtCwLCDRgdCy0Y/QttC40YLQtdGB0Ywg0YHQviDQvNC9
+0L7QuS4NCg0K0KEg0YPQstCw0LbQtdC90LjQtdC8LMKgDQoNCtC80LXQvdC10LTQttC10YAg0L/Q
+viDRhNCw0L3QtNGA0LDQudC30LjQvdCz0YMg0LrQvtC80LDQvdC00Ysg0J3QsNCy0LDQu9GM0L3Q
+vtCz0L4NCg==
+
+----==_mimepart_619527eec87ad_1c1450cd1547115515a
+Content-Type: multipart/related;
+ boundary="--==_mimepart_619527eec8a90_1c1450cd154711552d6";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_619527eec8a90_1c1450cd154711552d6
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdj7Ql9C00YDQsNCy0YHRgtCy0YPQudGC0LUhJm5ic3A7PGJyPg0KJm5ic3A7PC9kaXY+DQoN
+CjxkaXY+0JzRiyDQvtGC0LzQtdC90LjQu9C4INCy0LDRiNGDINC/0L7QtNC/0LjRgdC60YMuINCf
+0L7QstGC0L7RgNC90YvRhSDRgdC/0LjRgdCw0L3QuNC5INCx0YvRgtGMINC90LUg0LTQvtC70LbQ
+vdC+LiDQndC+INC10YHQu9C4INGB0LvRg9GH0LjRgtGB0Y8g0YHQsdC+0Lkg0Lgg0LTQtdC90YzQ
+s9C4INGB0L3QvtCy0LAg0YHQv9C40YjRg9GC0YHRjywg0L/QvtC20LDQu9GD0LnRgdGC0LAsINGB
+0LLRj9C20LjRgtC10YHRjCDRgdC+INC80L3QvtC5LjwvZGl2Pg0KDQo8ZGl2PtChINGD0LLQsNC2
+0LXQvdC40LXQvCwmbmJzcDs8YnI+DQrQvNC10L3QtdC00LbQtdGAINC/0L4g0YTQsNC90LTRgNCw
+0LnQt9C40L3Qs9GDINC60L7QvNCw0L3QtNGLINCd0LDQstCw0LvRjNC90L7Qs9C+PC9kaXY+DQo=
+
+----==_mimepart_619527eec8a90_1c1450cd154711552d6--
+
+----==_mimepart_619527eec87ad_1c1450cd1547115515a--
+
+----==_mimepart_619527eec8bc2_1c1450cd15471155389--

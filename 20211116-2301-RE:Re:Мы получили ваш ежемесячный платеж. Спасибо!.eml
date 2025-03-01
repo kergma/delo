@@ -1,0 +1,147 @@
+Delivered-To: pushkinsv@gmail.com
+Received: by 2002:a05:6000:1047:0:0:0:0 with SMTP id c7csp7830394wrx;
+        Tue, 16 Nov 2021 08:01:19 -0800 (PST)
+X-Google-Smtp-Source: ABdhPJzhI+rjLUBulgCygrKj8rjYxyrx71+9er/w5L7Obg9OxmPrF4cl34sMd39ZBawfbV7QWu0o
+X-Received: by 2002:a05:6638:25c4:: with SMTP id u4mr6414007jat.87.1637078478822;
+        Tue, 16 Nov 2021 08:01:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1637078478; cv=none;
+        d=google.com; s=arc-20160816;
+        b=zwjqMQd9+xERJ7tizt+7xrnXb/JJTtLYRZkB04O1/st+5rxD8yWSXeRkoU1EnLZ9Pk
+         k5Eo89tJeWnnbOiqgcd3RJPTit7D1gqM/eliT8MxK1yY7qmAHdznRufxeAtQopCgXTbc
+         D8Aw0KYsU4jfR1bEVSkGo1uUMx9IeY89abhbmIlXO4BYegcZnMCRS36W3lmmv9GqrxTx
+         B9v3vPl8JpbomdKTDU2SIT170NJw5QIv9qBr9xi1hFL0icv3j7h4qnTMA0C7N1SqlPZZ
+         ayvtf+KSHGrRRSvMPBq9rXLu1D8+akTgsSf5vYOUbtOhGkzPxzrbyBAdJmli1z/GeJL+
+         MxKQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:content-transfer-encoding:mime-version:subject:in-reply-to
+         :message-id:from:date:dkim-signature:dkim-signature;
+        bh=hNyr1yaps5C3PB74bT/CN1lEfPxnhnmxbt5Ntg7aI74=;
+        b=XuXnqeez/yhQvf3nwMgTBcprxMa0W9nm55nansnPKMzI+Qzm3JDjPQDyaV4bzCqx8q
+         M8ZcuFIRCBAWF5rgdPlHdxlOsE1q/vX/bMt9KsRVDY7FGFFXphP1962BE5P5JEul0H4D
+         CeBQPNbdGt6ODbllyY5q6Yi5JAr3iL6DAyhRLLQzG+/BEWkWZVpqhXljMmgMFxtyYia+
+         uwdJoGynvVUOFbvnBpByLH6Anack57sqrORK1I7JxZG0bQx3aK5WQQjwz/o38Z3y29VV
+         FRHpzfCQU6sKmFOmNjaK/BNr3jKmv+E5kK6OUjxgPE5YQOAE9hQ3p4DLppwBgTFW3wvE
+         h4oA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@out.supportbeemail.com header.s=smtpapi header.b=OAMy6Jq+;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=FyGFHqC6;
+       spf=pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.193.221 as permitted sender) smtp.mailfrom="bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=fbk.info
+Return-Path: <bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com>
+Received: from o4.em.out.supportbeemail.com (o4.em.out.supportbeemail.com. [149.72.193.221])
+        by mx.google.com with ESMTPS id w28si28528471pfq.194.2021.11.16.08.01.18
+        for <pushkinsv@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 16 Nov 2021 08:01:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.193.221 as permitted sender) client-ip=149.72.193.221;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@out.supportbeemail.com header.s=smtpapi header.b=OAMy6Jq+;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=FyGFHqC6;
+       spf=pass (google.com: domain of bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com designates 149.72.193.221 as permitted sender) smtp.mailfrom="bounces+1836816-bb73-pushkinsv=gmail.com@em.out.supportbeemail.com";
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=fbk.info
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=out.supportbeemail.com;
+	h=from:in-reply-to:subject:mime-version:content-type:
+	content-transfer-encoding:x-feedback-id:to;
+	s=smtpapi; bh=hNyr1yaps5C3PB74bT/CN1lEfPxnhnmxbt5Ntg7aI74=;
+	b=OAMy6Jq+qeKAYxBfIsT1we1pw4ggrgYhe98Rgne3aMsr40cRASEH4TCFc34Jg8Uh/+sF
+	WzU4GHz5RphW22F1md0v1AL96cT0TtGzxKZYPLVuf/gqPxnjci4O84zUBzneCb6vrHVZTt
+	CsJh2C2P2OH0v65woRWwHdsrNG3f8UWD0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=from:in-reply-to:subject:mime-version:content-type:
+	content-transfer-encoding:x-feedback-id:to;
+	s=smtpapi; bh=hNyr1yaps5C3PB74bT/CN1lEfPxnhnmxbt5Ntg7aI74=;
+	b=FyGFHqC6mDKafyKOiMDIfy15t9tWzPMnnv7YWepQUmCv7IGyQ3+YKzZS9hh//ekcjMsk
+	5Ygvj9ARZj3VrPuB+W66ml0rRmYgVZyf4szPXBFZdNjBAwsWQ1Dr8pf/7krvSNaJaVp+XB
+	4zBuDM0AzyFUtFj4pvbz01kTpMAYl4i6g=
+Received: by filterdrecv-7495dc4f9-b5qc9 with SMTP id filterdrecv-7495dc4f9-b5qc9-1-6193D5CD-1C
+        2021-11-16 16:01:17.301663915 +0000 UTC m=+6543608.711450459
+Received: from postfix.supportbeemail.com (unknown)
+	by geopod-ismtpd-3-1 (SG) with ESMTP id J3tckGmnTUKp3Ten76hEdQ
+	for <pushkinsv@gmail.com>; Tue, 16 Nov 2021 16:01:17.043 +0000 (UTC)
+Received: from localhost.localdomain (localhost.localdomain [127.0.0.1])
+	by postfix.supportbeemail.com (Postfix) with ESMTP id 00CC580358
+	for <pushkinsv@gmail.com>; Tue, 16 Nov 2021 16:01:17 +0000 (UTC)
+Date: Tue, 16 Nov 2021 16:01:17 +0000 (UTC)
+From:
+	=?utf-8?q?=D0=A4=D0=BE=D0=BD=D0=B4_=D0=B1=D0=BE=D1=80=D1=8C=D0=B1=D1=8B_?=
+	=?utf-8?q?=D1=81_=D0=BA=D0=BE=D1=80=D1=80=D1=83=D0=BF=D1=86=D0=B8=D0=B5?=
+	=?utf-8?q?=D0=B9?= <donate@fbk.info>
+Message-ID: <6193d5ccf2554_1c1450cd67c2480232e@supportbeemail.com>
+In-Reply-To: <CACo50SAfxaqXyZZeu4HWeu7TUUNgT5zYLo-a-vNC8KrYKTbHMg@mail.gmail.com>
+Subject: RE: Re: =?UTF-8?B?0JzRiyDQv9C+0LvRg9GH0LjQu9C4INCy0LDRiA==?=
+ =?UTF-8?B?INC10LbQtdC80LXRgdGP0YfQvdGL0Lkg0L/Qu9Cw0YLQtdC2Lg==?=
+ =?UTF-8?B?INCh0L/QsNGB0LjQsdC+IQ==?=
+Mime-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="--==_mimepart_6193d5ccf2bda_1c1450cd67c248026ed";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SupportBee-Agent-reply: true
+X-SupportBee-TicketId: 36247971
+X-Feedback-ID: 1836816:SG
+X-SG-EID: 
+ =?us-ascii?Q?pHt8awF22JOCerGoLIZJbGNhM6ASLjOVHOXYa2hJisgJ=2F8KrGxz4gQ=2FTGmqJaO?=
+ =?us-ascii?Q?5w6bVIw5wvmsmFdmne1bAlTjsaI2P2+cTXojTo6?=
+ =?us-ascii?Q?H1J2QHlhC31VdwEwMvs37Ls8w2Kj09dGD0ZccBH?=
+ =?us-ascii?Q?yv8fInBzCaSUnmTC2crQHbyugpApgCuX57yvN1V?=
+ =?us-ascii?Q?oFrWhTIQSOve8PHzIDqqytiqeXdkLfVcJKyYHJU?=
+ =?us-ascii?Q?UA7se5dYjcyJhuKtw2xuq497Jul4SD4WTFHPPxB?=
+ =?us-ascii?Q?dUBOBKGGhD1vzO9MNy3FtMWjDiGncQlUVpdgRym?= =?us-ascii?Q?czw=3D?=
+To: =?iso-8859-5?b?wdXg09XZIL/j6NrY3Q==?= <pushkinsv@gmail.com>
+X-Entity-ID: SGvpZXlrz4yUCFOEDKGVtw==
+
+
+----==_mimepart_6193d5ccf2bda_1c1450cd67c248026ed
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6193d5ccf2921_1c1450cd67c2480247e";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d5ccf2921_1c1450cd67c2480247e
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+0JfQtNGA0LDQstGB0YLQstGD0LnRgtC1IQ0KDQrQp9GC0L7QsdGLINC80Ysg0L7RgtC80LXQvdC4
+0LvQuCDQstCw0Ygg0L/Qu9Cw0YLQtdC2INC40LvQuCDQv9C+0LTQv9C40YHQutGDLCDQv9C+0LbQ
+sNC70YPQudGB0YLQsCwg0L/RgNC40YjQu9C40YLQtSDQutC+0LQsINC60L7RgtC+0YDRi9C5INCy
+0Ysg0L/QvtC70YPRh9C40LvQuCDRgdGA0LDQt9GDINC/0L7RgdC70LUg0YHQvtCy0LXRgNGI0LXQ
+vdC40Y8g0L/Qu9Cw0YLQtdC20LAuINCV0YHQu9C4INCy0Ysg0LXQs9C+INC90LUg0YHQvtGF0YDQ
+sNC90LjQu9C4IOKAlCDQv9GA0LjRiNC70LjRgtC1INGB0LvQtdC00YPRjtGJ0YPRjiDQuNC90YTQ
+vtGA0LzQsNGG0LjRjjoNCg0K4oCUINGB0YPQvNC80YMg0L/QtdGA0LXQstC+0LTQsDvCoA0KDQri
+gJQg0L/QvtGB0LvQtdC00L3QuNC1INGH0LXRgtGL0YDQtSDRhtC40YTRgNGLINC90L7QvNC10YDQ
+sCDQutCw0YDRgtGLLsKgDQoNCtCh0L/QsNGB0LjQsdC+INCy0LDQvCDQt9CwINC/0L7QtNC00LXR
+gNC20LrRgyHCoA0KDQrQoSDRg9Cy0LDQttC10L3QuNC10LwsDQoNCtC80LXQvdC10LTQttC10YAg
+0L/QviDRhNCw0L3QtNGA0LDQudC30LjQvdCz0YMg0LrQvtC80LDQvdC00Ysg0J3QsNCy0LDQu9GM
+0L3QvtCz0L4NCg==
+
+----==_mimepart_6193d5ccf2921_1c1450cd67c2480247e
+Content-Type: multipart/related;
+ boundary="--==_mimepart_6193d5ccf2b0e_1c1450cd67c24802532";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_6193d5ccf2b0e_1c1450cd67c24802532
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PGRpdj7Ql9C00YDQsNCy0YHRgtCy0YPQudGC0LUhPC9kaXY+DQoNCjxkaXY+0KfRgtC+0LHRiyDQ
+vNGLINC+0YLQvNC10L3QuNC70Lgg0LLQsNGIINC/0LvQsNGC0LXQtiDQuNC70Lgg0L/QvtC00L/Q
+uNGB0LrRgywg0L/QvtC20LDQu9GD0LnRgdGC0LAsINC/0YDQuNGI0LvQuNGC0LUg0LrQvtC0LCDQ
+utC+0YLQvtGA0YvQuSDQstGLINC/0L7Qu9GD0YfQuNC70Lgg0YHRgNCw0LfRgyDQv9C+0YHQu9C1
+INGB0L7QstC10YDRiNC10L3QuNGPINC/0LvQsNGC0LXQttCwLiDQldGB0LvQuCDQstGLINC10LPQ
+viDQvdC1INGB0L7RhdGA0LDQvdC40LvQuCDigJQg0L/RgNC40YjQu9C40YLQtSDRgdC70LXQtNGD
+0Y7RidGD0Y4g0LjQvdGE0L7RgNC80LDRhtC40Y46PGJyPg0K4oCUINGB0YPQvNC80YMg0L/QtdGA
+0LXQstC+0LTQsDsmbmJzcDs8YnI+DQrigJQg0L/QvtGB0LvQtdC00L3QuNC1INGH0LXRgtGL0YDQ
+tSDRhtC40YTRgNGLINC90L7QvNC10YDQsCDQutCw0YDRgtGLLiZuYnNwOzwvZGl2Pg0KDQo8ZGl2
+PtCh0L/QsNGB0LjQsdC+INCy0LDQvCDQt9CwINC/0L7QtNC00LXRgNC20LrRgyEmbmJzcDs8L2Rp
+dj4NCg0KPGRpdj7QoSDRg9Cy0LDQttC10L3QuNC10LwsPGJyPg0K0LzQtdC90LXQtNC20LXRgCDQ
+v9C+INGE0LDQvdC00YDQsNC50LfQuNC90LPRgyDQutC+0LzQsNC90LTRiyDQndCw0LLQsNC70YzQ
+vdC+0LPQvjwvZGl2Pg0K
+
+----==_mimepart_6193d5ccf2b0e_1c1450cd67c24802532--
+
+----==_mimepart_6193d5ccf2921_1c1450cd67c2480247e--
+
+----==_mimepart_6193d5ccf2bda_1c1450cd67c248026ed--
